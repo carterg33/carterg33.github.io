@@ -1,6 +1,18 @@
+---
+title: 'Test'
+date: 2015-08-14
+permalink: /posts/2012/08/test/
+tags:
+  - cool posts
+  - category1
+  - category2
+---
+
+
 # Investigating the Chess Meta: A Data Driven Approach
 
-You put in your chess username, it looks you up in the lichess API and then gives you ratings according to aggresive vs solid, tells you your best performing openings and others to try
+You put in your chess username, it looks you up in the lichess API and then gives you ratings according to aggresive vs solid, tells you your best performing openings and others to try
+
 
 
 ## Import Data and Libraries
@@ -15,12 +27,18 @@ cd '/content/drive/MyDrive/Chess'
 
 
 ```
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import plotly.express as px
-import seaborn as sns
-%matplotlib inline
+import numpy as np
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+import plotly.express as px
+
+import seaborn as sns
+
+%matplotlib inline
+
 
 ```
 
@@ -29,8 +47,10 @@ import seaborn as sns
 df = pd.read_csv("games.csv")
 ```
 
-## A Quick Look & Transformations
-
+## A Quick Look & Transformations
+
+
+
 
 
 
@@ -183,24 +203,37 @@ Our first consideration
 
 
 ```
-df = (
-    df.assign(
-        opening_archetype=df.opening_name.map(
-            lambda n: n.split(":")[0].split("|")[0].split("#")[0].strip()
-        ),
-        opening_moves=df.apply(lambda srs: srs['moves'].split(" ")[:srs['opening_ply']],
-                                  axis=1)
-    )
+df = (
+
+    df.assign(
+
+        opening_archetype=df.opening_name.map(
+
+            lambda n: n.split(":")[0].split("|")[0].split("#")[0].strip()
+
+        ),
+
+        opening_moves=df.apply(lambda srs: srs['moves'].split(" ")[:srs['opening_ply']],
+
+                                  axis=1)
+
+    )
+
 )
 ```
 
 
 ```
-# find distribution of chess openings by colour
-# are certain openings more popular at higher ratings?
-# are certain openings more popular at certain time increments?
-# chances of beating a higher player
-# What opening should you play when playing vs a higher player? - ie, what have the best win rate at 
+# find distribution of chess openings by colour
+
+# are certain openings more popular at higher ratings?
+
+# are certain openings more popular at certain time increments?
+
+# chances of beating a higher player
+
+# What opening should you play when playing vs a higher player? - ie, what have the best win rate at 
+
 # Is there a similarity between palyers
 ```
 
