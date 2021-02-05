@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Machine Learning for Insurance: Predicting Claimants"
+excerpt: "Classification model using nested cross validation to test multiple missing value imputation methods & classification algorithms while computing a fair estimate of accuracy.<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
