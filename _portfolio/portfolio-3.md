@@ -3,7 +3,7 @@ title: "From Scratch: Can Neural Networks Land a Spaceship?"
 excerpt: "A simple perceptron model coded completely from scratch without the use of Python libraries - capable of learning to land a spaceship (kind of).<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
-
+<font size="20">
 # Classification Model
 
 ### Import Libraries & Load Data
@@ -1152,9 +1152,8 @@ test_df
 </div>
 
 
-
-
 ```python
 # export to csv
 test_df.to_csv('CE802_P2_Results.csv', index=False)
 ```
+</font> 
