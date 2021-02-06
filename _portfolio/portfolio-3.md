@@ -1,6 +1,6 @@
 ---
 title: "From Scratch: Can Neural Networks Land a Spaceship?"
-excerpt: "Classification model using nested cross validation to test multiple missing value imputation methods & classification algorithms while computing a fair estimate of accuracy.<br/><img src='/images/500x300.png'>"
+excerpt: "A simple perceptron model coded completely from scratch without the use of Python libraries - capable of learning to land a spaceship (kind of).<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
